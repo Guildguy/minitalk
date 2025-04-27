@@ -15,4 +15,15 @@
 # include <signal.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <sys/siginfo.h>
+# include <sys/types.h>
+
+typedef struct s_message
+{
+	unsigned int	byte_i;
+	unsigned char	current_pid;
+	pit_t			client_pid;
+}				t_message
+
+
 #endif
