@@ -14,9 +14,16 @@
 
 int	main(int c, char **v)
 {
+	pid_t	server_pid;
 	if (c != 3 || !ft_strlen(v[2]))
 	{
-		printf("Error to : %s", v[0]);
-		exit(EXIT_FAILURE);
+		printf("Error to : %s\n", v[0]);
+		return (EXIT_FAILURE);
+	}
+	server_pid = ft_atoi(v[1]);
+	if (kill(server_pid, 0) == -1)
+	{
+		printf("Invalid PID: %s\n", v[1]);
+		return (EXIT_FAILURE);
 	}
 }
