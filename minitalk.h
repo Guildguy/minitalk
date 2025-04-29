@@ -15,6 +15,7 @@
 # include <signal.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
 # include <sys/siginfo.h>
 # include <sys/types.h>
 
@@ -25,5 +26,7 @@ typedef struct s_message
 	pit_t			client_pid;
 }				t_message
 
+//Libft
+size_t	ft_strlen(char *str);
 
 #endif
