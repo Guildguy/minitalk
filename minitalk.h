@@ -16,17 +16,18 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
-# include <sys/siginfo.h>
+//# include <sys/siginfo.h>
 # include <sys/types.h>
 
 typedef struct s_message
 {
 	unsigned int	byte_i;
 	unsigned char	current_pid;
-	pit_t			client_pid;
-}				t_message
+	pid_t			client_pid;
+}				t_message;
 
 //Libft
 size_t	ft_strlen(char *str);
+int		ft_atoi(char *nptr);
 
 #endif
